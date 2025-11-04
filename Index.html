@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.botpress.cloud/webchat/v3.3/inject.js"></script>
+    <script src="https://files.bpcontent.cloud/2025/11/01/22/20251101221629-467Q0DTW.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Starbucks</title>
+</head>
+
+<body>
+    <!-- 🔵 Fundo fixo com círculo verde -->
+    <div class="circulo"></div>
+
+    <!-- 🔰 Logo Starbucks -->
+    <img src="Img/logo.png" alt="Logo Starbucks" />
+
+    <!-- 🧱 Estrutura principal -->
+    <div class="conteudo">
+        <div class="caixa-texto">
+            <h1>It's not just coffee. It's <span>Starbucks.</span></h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum mollitia facere molestias quas
+                accusantium
+                praesentium aspernatur nobis repellendus. Ab magni repellat ullam molestiae aspernatur ratione
+                consequatur officia consectetur ipsam aliquid!
+            </p>
+            <button id="btnSaibaMais">Saiba mais</button>
+        </div>
+
+        <div class="imagem-maior">
+            <img class="CopoMaior" src="Img/img1.png" alt="Copo Starbucks" />
+        </div>
+    </div>
+
+    <!-- ☕️ Copinhos flutuantes restaurados -->
+    <div class="caixa-Menu">
+        <img src="Img/thumb1.png" class="botao-menu" alt="Miniatura 1"
+            onclick="mudarcor('#017143'); trocaImagem('Img/img1.png')">
+        <img src="Img/thumb2.png" class="botao-menu" alt="Miniatura 2"
+            onclick="mudarcor('#eb7495'); trocaImagem('Img/img2.png')">
+        <img src="Img/thumb3.png" class="botao-menu" alt="Miniatura 3"
+            onclick="mudarcor('#d752b1'); trocaImagem('Img/img3.png')">
+    </div>
+
+    <!-- =====================================================
+       🧭 NOVA SEÇÃO PROMOCIONAL - FORMULÁRIO + MAPA
+       ===================================================== -->
+    <section id="secaoPromocao">
+        <div class="conteudo-promocao">
+            <!-- 📱 Bloco esquerdo: formulário -->
+            <div class="formulario">
+                <h2>Cadastre-se e ganhe um bônus ☕</h2>
+                <p>Informe seu número de telefone para participar da promoção:</p>
+                <form id="formBonus">
+                    <input type="tel" id="telefone" placeholder="Digite seu número (ex: 11991935863)" required>
+                    <button type="submit">Participar</button>
+                </form>
+                <p class="localizacao">📍 Av. Paulista, 1374 - São Paulo, SP</p>
+            </div>
+
+            <!-- 🗺️ Bloco direito: mapa -->
+            <div class="mapa">
+                <img src="Img/mapalocal.png" alt="Mapa Starbucks">
+            </div>
+        </div>
+    </section>
+
+    <!-- ⚙️ Rodapé -->
+    <footer>
+        <p>© 2025 <span class="marca">Neto.Dev404</span> — Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="Script.js"></script>
+</body>
+
+</html>
