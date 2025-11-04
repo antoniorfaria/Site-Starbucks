@@ -1,5 +1,5 @@
 /* ===========================================================
-   🌟 ESTILOS BASE - ESTRUTURA ORIGINAL DO PROJETO
+   🌟 ESTILOS BASE - ESTRUTURA ORIGINAL DO PROJETO (by Neto.dev404)
    =========================================================== */
 * {
     margin: 0;
@@ -9,7 +9,7 @@
 }
 
 body {
-    padding: 20px 100px 100px;
+    padding: 20px 40px 80px;
     background-image: url("Img/fundo.jpg");
     background-position: center;
     background-size: cover;
@@ -22,7 +22,7 @@ body {
 h1 {
     color: white !important;
     text-shadow: 0 0 10px rgba(0, 112, 74, 0.6);
-    font-size: 60px;
+    font-size: clamp(28px, 6vw, 60px);
     font-weight: bold;
 }
 
@@ -31,18 +31,20 @@ h1 span {
 }
 
 p {
-    font-size: 19px;
+    font-size: 18px;
     color: white;
+    line-height: 1.5;
 }
 
 /* ==== ESTRUTURA PRINCIPAL ==== */
 .caixa-Menu {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     position: relative;
     z-index: 5;
-    margin-top: 100px;
+    margin-top: 60px;
+    flex-wrap: wrap;
 }
 
 .conteudo {
@@ -51,25 +53,28 @@ p {
     align-items: center;
     justify-content: space-between;
     margin-top: 50px;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .CopoMaior {
-    width: 340px;
+    width: 300px;
+    max-width: 80vw;
 }
 
 .caixa-texto {
-    width: 600px;
+    max-width: 550px;
 }
 
 /* ==== MINIATURAS DE COPOS ==== */
 .botao-menu {
-    width: 95px;
+    width: 85px;
     cursor: pointer;
     transition: 0.5s;
 }
 
 .botao-menu:hover {
-    transform: translateY(-30px);
+    transform: translateY(-20px);
 }
 
 /* ==== ELEMENTO DE FUNDO VERDE ==== */
@@ -78,23 +83,24 @@ p {
     width: 100%;
     height: 100%;
     position: fixed;
-    /* 🧩 Fixa o fundo na tela */
     top: 0;
     left: 0;
     clip-path: circle(600px at right 70%);
     z-index: -1;
+    transition: opacity 0.8s ease;
 }
 
-/* ==== BOTÕES GERAIS ==== */
+/* ==== BOTÕES ==== */
 button {
     margin-top: 20px;
-    padding: 10px 20px;
+    padding: 10px 25px;
     background-color: #00704A;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: 0.5s;
+    font-size: 16px;
+    transition: 0.3s;
 }
 
 button:hover {
@@ -102,7 +108,7 @@ button:hover {
 }
 
 /* ===========================================================
-   🧭 NOVA SEÇÃO PROMOCIONAL - FORMULÁRIO + MAPA
+   🧭 SEÇÃO PROMOCIONAL
    =========================================================== */
 #secaoPromocao {
     display: flex;
@@ -114,7 +120,7 @@ button:hover {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
     margin-top: 120px;
     padding: 35px;
-    width: 85%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
     scroll-margin-top: 80px;
@@ -153,10 +159,11 @@ button:hover {
 }
 
 .formulario input {
-    padding: 8px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 15px;
+    width: 100%;
 }
 
 .formulario button {
@@ -164,7 +171,7 @@ button:hover {
     color: white;
     border: none;
     border-radius: 6px;
-    padding: 8px;
+    padding: 10px;
     font-size: 15px;
     cursor: pointer;
     transition: 0.3s;
@@ -182,7 +189,8 @@ button:hover {
 
 /* BLOCO DIREITO - MAPA */
 .mapa img {
-    width: 300px;
+    width: 280px;
+    max-width: 100%;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
     object-fit: cover;
@@ -201,4 +209,67 @@ footer {
 .marca {
     color: #00aa66;
     font-weight: 600;
+}
+
+/* ===========================================================
+   📱 RESPONSIVIDADE
+   =========================================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 15px 25px 60px;
+    }
+
+    .conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .caixa-texto {
+        width: 100%;
+    }
+
+    .CopoMaior {
+        width: 220px;
+    }
+
+    .circulo {
+        clip-path: circle(350px at center top);
+    }
+
+    #secaoPromocao {
+        width: 95%;
+        padding: 25px;
+    }
+
+    .formulario,
+    .mapa img {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .botao-menu {
+        width: 70px;
+    }
+
+    .caixa-Menu {
+        gap: 10px;
+        margin-top: 40px;
+    }
+
+    .circulo {
+        clip-path: circle(280px at center top);
+    }
 }
